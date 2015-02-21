@@ -1,3 +1,124 @@
-<h2 id="title">Welcome to Ember.js</h2>
+{{!-- <h2 id="title">Welcome to Ember.js</h2>
+{{google-map}}
+{{outlet}} --}}
 
-{{outlet}}
+<h2 id="title">
+  Simple example of using
+  <a href="https://github.com/huafu/ember-google-map">ember-google-map</a>
+</h2>
+
+{{google-map
+  lat=lat lng=lng type=type zoom=zoom markers=markers
+  infoWindows=infoWindows markerInfoWindowTemplateName='marker-info-window'
+  polylines=polylines polygons=polygons circles=circles
+  gopt_mapTypeControl=false gopt_backgroundColor='transparent'
+  autoFitBounds=true}}
+
+<h3>Map settings</h3>
+<div>
+  <label>center lat/lng: {{input value=lat class='coord'}}/{{input value=lng class='coord'}}</label>
+  <label>zoom: {{input value=zoom}}</label>
+  <label>type: {{view 'select' content=mapTypes
+  optionLabelPath='content.label' optionValuePath='content.id' value=type}}</label>
+</div>
+
+<h3>Markers</h3>
+<div>
+  <ul class="markers">
+    {{#each marker in markers}}
+      <li>
+        <label>title: {{input value=marker.title}}</label>
+        <label>desc.: {{input value=marker.description}}</label>
+        <label>lat/lng: {{input value=marker.lat class='coord'}}/{{input value=marker.lng class='coord'}}</label>
+        <label>{{input type='checkbox' checked=marker.isVisible}}visible</label> |
+        <label>{{input type='checkbox' checked=marker.isDraggable}}draggable</label>
+        <button {{action 'removeMarker' marker}}>x</button>
+      </li>
+    {{/each}}
+  </ul>
+  <button {{action 'addMarker'}}>add</button>
+</div>
+
+<h3>Info windows</h3>
+<div>
+  <ul class="info-windows">
+    {{#each iw in infoWindows}}
+      <li>
+        <label>title: {{input value=iw.title}}</label>
+        <label>desc.: {{input value=iw.description}}</label>
+        <label>lat/lng: {{input value=iw.lat class='coord'}}/{{input value=iw.lng class='coord'}}</label>
+        <label>{{input type='checkbox' checked=iw.isVisible}}visible</label>
+        <button {{action 'removeInfoWindow' iw}}>x</button>
+      </li>
+    {{/each}}
+  </ul>
+  <button {{action 'addInfoWindow'}}>add</button>
+</div>
+
+<h3>Polylines</h3>
+<div>
+  <ul class="polylines">
+    {{#each polyline in polylines}}
+      <li>
+        <label>{{input type='checkbox' checked=polyline.isVisible}}visible</label> |
+        <label>{{input type='checkbox' checked=polyline.isDraggable}}draggable</label>
+        <label>{{input type='checkbox' checked=polyline.isEditable}}editable</label>
+        <button {{action 'removePolyline' polyline}}>x</button>
+        <ul class="polyline-path">
+          {{#each entry in polyline.path}}
+            <li>
+              <label>lat/lng: {{input value=entry.lat class='coord'}}
+                /{{input value=entry.lng class='coord'}}</label>
+              <button {{action 'removePolylinePathItem' polyline.path entry}}>x</button>
+            </li>
+          {{/each}}
+        </ul>
+        <button {{action 'addPolylinePathItem' polyline.path}}>add point</button>
+      </li>
+    {{/each}}
+  </ul>
+  <button {{action 'addPolyline'}}>add</button>
+</div>
+
+<h3>Polygons</h3>
+<div>
+  <ul class="polygons">
+    {{#each polygon in polygons}}
+      <li>
+        <label>{{input type='checkbox' checked=polygon.isVisible}}visible</label> |
+        <label>{{input type='checkbox' checked=polygon.isDraggable}}draggable</label>
+        <label>{{input type='checkbox' checked=polygon.isEditable}}editable</label>
+        <button {{action 'removePolygon' polygon}}>x</button>
+        <ul class="polygon-path">
+          {{#each entry in polygon.path}}
+            <li>
+              <label>lat/lng: {{input value=entry.lat class='coord'}}
+                /{{input value=entry.lng class='coord'}}</label>
+              <button {{action 'removePolygonPathItem' polygon.path entry}}>x</button>
+            </li>
+          {{/each}}
+        </ul>
+        <button {{action 'addPolygonPathItem' polygon.path}}>add point</button>
+      </li>
+    {{/each}}
+  </ul>
+  <button {{action 'addPolygon'}}>add</button>
+</div>
+
+<h3>Circles</h3>
+<div>
+  <ul class="circles">
+    {{#each circle in circles}}
+      <li>
+        <label>center lat/lng: {{input value=circle.lat class='coord'}}
+          /{{input value=circle.lng class='coord'}}</label>
+        <label>radius: {{input value=radius class='coord'}}</label>
+        <label>{{input type='checkbox' checked=circle.isVisible}}visible</label> |
+        <label>{{input type='checkbox' checked=circle.isDraggable}}draggable</label> |
+        <label>{{input type='checkbox' checked=circle.isEditable}}editable</label>
+        <button {{action 'removeCircle' circle}}>x</button>
+      </li>
+    {{/each}}
+  </ul>
+  <button {{action 'addCircle'}}>add</button>
+</div>
