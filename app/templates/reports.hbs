@@ -24,5 +24,6 @@
     {{#each report in model}}
         {{report-panel report=report}}
         <i class="pull-right glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
+        <i class="glyphicon glyphicon-pencil" {{action 'showModal' 'modals/edit-report-modal' report}}></i>
     {{/each}}
 </div>

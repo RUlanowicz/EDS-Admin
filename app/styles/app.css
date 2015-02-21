@@ -9,3 +9,7 @@
 .application-outlet {
     margin-left: 150px;
 }
+
+.modal-dialog {
+    width: 100%;
+}
