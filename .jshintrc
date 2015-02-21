@@ -1,9 +1,15 @@
 {
-  "predef": [
+  /*"predef": [
     "document",
     "window",
     "-Promise"
-  ],
+  ],*/
+  "predef": {
+     "document": true,
+     "window": true,
+     "WowENV": true,
+     "moment": true
+   },
   "browser": true,
   "boss": true,
   "curly": true,

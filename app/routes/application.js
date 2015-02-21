@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model: function() {
-        return this.store.find("report");
+    beforeModel: function() {
+        this.transitionTo('/reports');
     },
     actions: {
         showModal: function(name, model) {

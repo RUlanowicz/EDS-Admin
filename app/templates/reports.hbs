@@ -1,3 +1,26 @@
-reports!!
+{{!--
+<div class="table-responsive">
 
-{{outlet}}
+    <table class="table table-striped">
+        <tbody>
+            <tr class="clickable" data-toggle="collapse" id="row1" data-target=".row1">
+            <td><i class="glyphicon glyphicon-plus"></i></td>
+            <td>data</td>
+          	<td>data</td>
+            <td>data</td>
+        </tr>
+        <tr class="collapse row1">
+            {{google-map
+              lat=lat lng=lng type=type zoom=zoom
+              gopt_mapTypeControl=false gopt_backgroundColor='transparent'
+              autoFitBounds=true}}
+
+        </tr>
+        </tbody>
+    </table>
+</div> --}}
+<div class="panel-group" id="accordion">
+    {{#each report in model}}
+        {{report-panel report=report}}
+    {{/each}}
+</div>

@@ -15,6 +15,25 @@ Report.reopenClass({
     FIXTURES: [
         {
             id: 1,
+            reporter: "The Dude",
+            images: [],
+            tag: "",
+            description: "",
+            lat: 1,
+            lng: 1
+        },
+        {
+            id: 2,
+            reporter: "Spiderman",
+            images: [],
+            tag: "",
+            description: "",
+            lat: 1,
+            lng: 1
+        },
+        {
+            id: 3,
+            reporter: "Troy Harder",
             images: [],
             tag: "",
             description: "",
