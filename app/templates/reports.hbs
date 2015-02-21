@@ -1,29 +1,40 @@
-{{!--
+<h1 class="page-header">Reports</h1>
+
+
+
+
 <div class="table-responsive">
 
-    <table class="table table-striped">
-        <tbody>
-            <tr class="clickable" data-toggle="collapse" id="row1" data-target=".row1">
-            <td><i class="glyphicon glyphicon-plus"></i></td>
-            <td>data</td>
-          	<td>data</td>
-            <td>data</td>
-        </tr>
-        <tr class="collapse row1">
-            {{google-map
-              lat=lat lng=lng type=type zoom=zoom
-              gopt_mapTypeControl=false gopt_backgroundColor='transparent'
-              autoFitBounds=true}}
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Images</th>
+      <th>Location</th>
+      <th>User</th>
+      <th class="text-center">Edit</th>
+      <th class="text-center">Delete</th>
+    </tr>
+  </thead>
 
-        </tr>
-        </tbody>
-    </table>
-</div> --}}
-
-<div class="panel-group" id="accordion">
+<tbody>
     {{#each report in model}}
-        {{report-panel report=report}}
-        <i class="pull-right glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
-        <i class="glyphicon glyphicon-pencil" {{action 'showModal' 'modals/edit-report-modal' report}}></i>
+        <tr>
+          <td>{{report.dateReported}}</td>
+          <td>{{report.tag}}</td>
+          <td>{{report.description}}</td>
+          <td>{{report.images}}</td>
+          <td>
+            <i class="glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
+          </td>
+          <td>{{report.reporter}}</td>
+          <td class="text-center"><i class="glyphicon glyphicon-pencil" {{action 'showModal' 'modals/map-modal' report}}></i></td>
+          <td class="text-center"><i class="glyphicon glyphicon-trash" {{action 'showModal' 'modals/delete-modal' report}}></i></td>
+        </tr>
     {{/each}}
+  </tbody>
+</table>
+
 </div>
