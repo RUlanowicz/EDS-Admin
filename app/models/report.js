@@ -8,13 +8,17 @@ var Report = DS.Model.extend({
     description: DS.attr(), // String
     // coords: DS.attr() // { lat: x, lng: y }
     lat: DS.attr(),
-    lng: DS.attr()
+    lng: DS.attr(),
+    sinceReported: function() {
+        return moment("20120620", "YYYYMMDD").fromNow();
+    }.property('dateReported')
 });
 
 Report.reopenClass({
     FIXTURES: [
         {
             id: 1,
+            dateReported: 12345,
             reporter: "The Dude",
             images: [],
             tag: "",
