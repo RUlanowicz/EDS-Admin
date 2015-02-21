@@ -39,4 +39,9 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
+// app.import('bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css');
+// app.import('bower_components/startbootstrap-sb-admin-2/dist/css/timeline.css');
+//
+// app.import('bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.cs);
+
 module.exports = app.toTree();
