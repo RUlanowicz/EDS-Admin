@@ -1,0 +1,7 @@
+{{#modal-dialog title='Map' ok='removeModal' close='removeModal'}}
+    {{lat}} {{lng}}
+    {{google-map
+      lat=lat lng=lng type="road" zoom=3
+      gopt_mapTypeControl=false gopt_backgroundColor='transparent'
+      autoFitBounds=true}}
+{{/modal-dialog}}

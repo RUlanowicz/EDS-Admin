@@ -32,8 +32,8 @@ Report.reopenClass({
             images: [],
             tag: "",
             description: "",
-            lat: 1,
-            lng: 1
+            lat: 30,
+            lng: 40
         },
         {
             id: 3,
@@ -41,8 +41,8 @@ Report.reopenClass({
             images: [],
             tag: "",
             description: "",
-            lat: 1,
-            lng: 1
+            lat: 8,
+            lng: -41
         }
 
     ]

@@ -19,8 +19,10 @@
         </tbody>
     </table>
 </div> --}}
+
 <div class="panel-group" id="accordion">
     {{#each report in model}}
         {{report-panel report=report}}
+        <i class="pull-right glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
     {{/each}}
 </div>
