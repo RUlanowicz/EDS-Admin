@@ -1,5 +1,7 @@
-<table class="table table-striped">
+<div class="table-responsive">
 
+<table class="table table-striped">
+<thead>
     <tr>
       <th>Date</th>
       <th>Type</th>
@@ -10,7 +12,9 @@
       <th>Edit</th>
       <th>Delete</th>
     </tr>
+  </thead>
 
+<tbody>
     {{#each report in model}}
         <tr>
           <td>{{report.dateReported}}</td>
@@ -25,4 +29,7 @@
           <td>Delete</td>
         </tr>
     {{/each}}
+  </tbody>
 </table>
+
+</div>
