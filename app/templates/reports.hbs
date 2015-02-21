@@ -1,28 +1,28 @@
-{{!--
-<div class="table-responsive">
+<table class="table table-striped">
 
-    <table class="table table-striped">
-        <tbody>
-            <tr class="clickable" data-toggle="collapse" id="row1" data-target=".row1">
-            <td><i class="glyphicon glyphicon-plus"></i></td>
-            <td>data</td>
-          	<td>data</td>
-            <td>data</td>
-        </tr>
-        <tr class="collapse row1">
-            {{google-map
-              lat=lat lng=lng type=type zoom=zoom
-              gopt_mapTypeControl=false gopt_backgroundColor='transparent'
-              autoFitBounds=true}}
+    <tr>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Images</th>
+      <th>Location</th>
+      <th>User</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
 
-        </tr>
-        </tbody>
-    </table>
-</div> --}}
-
-<div class="panel-group" id="accordion">
     {{#each report in model}}
-        {{report-panel report=report}}
-        <i class="pull-right glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
+        <tr>
+          <td>{{report.dateReported}}</td>
+          <td>{{report.tag}}</td>
+          <td>{{report.description}}</td>
+          <td>{{report.images}}</td>
+          <td>
+            <i class="glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
+          </td>
+          <td>{{report.reporter}}</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
     {{/each}}
-</div>
+</table>
