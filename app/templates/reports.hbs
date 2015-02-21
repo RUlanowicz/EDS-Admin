@@ -1,3 +1,8 @@
+<h1 class="page-header">Reports</h1>
+
+
+
+
 <div class="table-responsive">
 
 <table class="table table-striped">
@@ -26,7 +31,7 @@
           </td>
           <td>{{report.reporter}}</td>
           <td class="text-center"><i class="glyphicon glyphicon-pencil"></i></td>
-          <td class="text-center"><i class="glyphicon glyphicon-trash"></i></td>
+          <td class="text-center"><i class="glyphicon glyphicon-trash" {{action 'showModal' 'modals/delete-modal' report}}></i></td>
         </tr>
     {{/each}}
   </tbody>
