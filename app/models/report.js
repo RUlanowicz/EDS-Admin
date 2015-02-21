@@ -6,7 +6,9 @@ var Report = DS.Model.extend({
     images: DS.attr(), // String url []
     tags: DS.attr(), // String some constant
     description: DS.attr(), // String
-    coords: DS.attr() // { lat: x, lng: y }
+    // coords: DS.attr() // { lat: x, lng: y }
+    lat: DS.attr(),
+    lng: DS.attr()
 });
 
 Report.reopenClass({
@@ -14,12 +16,10 @@ Report.reopenClass({
         {
             id: 1,
             images: [],
-            type: "",
+            tag: "",
             description: "",
-            coords: {
-                lat: 1,
-                lng: 1
-            }
+            lat: 1,
+            lng: 1
         }
 
     ]
