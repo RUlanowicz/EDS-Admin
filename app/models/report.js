@@ -26,10 +26,9 @@ Report.reopenClass({
             lng: -80.005642,
 
             user: {
-              firstName: "The",
-              lastName: "Dude",
+              name: "The Dude",
               email: "dude@eds.com",
-              phone: 736,
+              phone: "412-555-2736",
               zip: 18018
             }
 
@@ -45,10 +44,9 @@ Report.reopenClass({
             lng: -79.998733,
 
             user: {
-              firstName: "Peter",
-              lastName: "Parker",
+              name: "Peter Parker",
               email: "spiderman@eds.com",
-              phone: 736,
+              phone: "412-555-7363",
               zip: 18018
             }
         },
@@ -66,10 +64,9 @@ Report.reopenClass({
             lng: -80.031102,
 
             user: {
-              firstName: "Troy",
-              lastName: "Harder",
+              name: "Troy Harder",
               email: "troy@eds.com",
-              phone: 736,
+              phone: "412-555-4343",
               zip: 18018
             }
         }
