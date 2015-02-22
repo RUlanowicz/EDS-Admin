@@ -21,6 +21,7 @@ Report.reopenClass({
             dateReported: 12345,
             reporter: "The Dude",
             images: [],
+
             tag: "Dumping",
             description: "Look at where these jerks are dumping",
             lat: 40.375023,
@@ -31,6 +32,7 @@ Report.reopenClass({
             dateReported: 12345,
             reporter: "Spiderman",
             images: [],
+
             tag: "Clogged Inlet",
             description: "This inlet is clogged",
             lat: 40.397664,
@@ -40,6 +42,7 @@ Report.reopenClass({
             id: 3,
             dateReported: 12345,
             reporter: "Troy Harder",
+
             images: [
                 "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg",
                 "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg",

@@ -13,3 +13,7 @@
 .modal-dialog {
     width: 100%;
 }
+
+.glyph-link {
+  cursor:pointer;
+}
