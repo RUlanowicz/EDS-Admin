@@ -1,8 +1,5 @@
 <h1 class="page-header">Reports</h1>
 
-
-
-
 <div class="table-responsive">
 
 <table class="table table-striped">
@@ -11,10 +8,8 @@
       <th>Date</th>
       <th>Type</th>
       <th>Description</th>
-      <th>Images</th>
-      <th>Location</th>
       <th>User</th>
-      <th class="text-center">Edit</th>
+      <th class="text-center">View</th>
       <th class="text-center">Delete</th>
     </tr>
   </thead>
@@ -25,12 +20,8 @@
           <td>{{report.dateReported}}</td>
           <td>{{report.tag}}</td>
           <td>{{report.description}}</td>
-          <td>{{report.images}}</td>
-          <td>
-            <i class="glyphicon glyphicon-plus" {{action 'showModal' 'modals/map-modal' report}}></i>
-          </td>
           <td>{{report.reporter}}</td>
-          <td class="text-center"><i class="glyphicon glyphicon-pencil"></i></td>
+          <td class="text-center"><i class="glyphicon glyphicon-new-window"></i></td>
           <td class="text-center"><i class="glyphicon glyphicon-trash" {{action 'showModal' 'modals/delete-modal' report}}></i></td>
         </tr>
     {{/each}}
