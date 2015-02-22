@@ -40,7 +40,10 @@ Report.reopenClass({
             id: 3,
             dateReported: 12345,
             reporter: "Troy Harder",
-            images: [],
+            images: [
+                "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg",
+                "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg",
+                "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg"],
             tag: "Erosion",
             description: "There's so much erosion",
             lat: 40.368415,
