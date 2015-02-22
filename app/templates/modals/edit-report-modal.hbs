@@ -1,12 +1,12 @@
-{{#modal-dialog title='View' ok='save' close='removeModal'}}
+{{#modal-dialog title='Report Info' ok='save' close='removeModal'}}
 
     <div class="row">
         <div class="col-md-8">
             <form class="form-horizontal" role="form">
                 <div class="row form-group">
-                    <label class="control-label col-sm-3" for="reporter">Reporter:</label>
+                    <label class="control-label col-sm-3" for="user.name">Reporter:</label>
                     <div class="col-sm-9">
-                        {{input type="text" class="form-control" id="email" placeholder="Enter Reporter" value=reporter}}
+                        {{input type="text" class="form-control" id="email" placeholder="Enter Name" value=user.name}}
                     </div>
                 </div>
                 <div class="row form-group">
@@ -29,8 +29,8 @@
 
         <div class="col-md-4">
             {{#each imageUrl in images}}
-                <div class="img-stacked">
-                    <img class="img-thumbnail img-stacked" {{ bind-attr src=imageUrl }}>
+                <div class="stack">
+                    <img class="img-thumbnail" {{ bind-attr src=imageUrl }}>
                 </div>
             {{/each}}
 

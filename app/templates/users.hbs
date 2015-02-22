@@ -1,0 +1,27 @@
+<h1 class="page-header">Citizen Scientists</h1>
+
+<div class="table-responsive">
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>E-mail</th>
+      <th>Phone</th>
+      <th>Zip</th>
+    </tr>
+  </thead>
+
+<tbody>
+    {{#each report in model}}
+        <tr>
+          <td>{{report.user.name}}</td>
+          <td>{{report.user.email}}</td>
+          <td>{{report.user.phone}}</td>
+          <td>{{report.user.zip}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+</div>

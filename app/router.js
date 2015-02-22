@@ -10,6 +10,7 @@ Router.map(function() {
       this.resource('reports.report', { path: ':report_id' });
   });
   this.route('map');
+  this.route('users');
 });
 
 export default Router;
