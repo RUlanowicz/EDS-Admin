@@ -1,11 +1,12 @@
 .navbar {
     border-radius: 0px;
     margin-bottom: 0px;
-    border-bottom: 0px;
+    /*border-bottom: 0px;*/
 }
 
 .navbar-custom {
-  background-color: #3331AB;
+  background-color: #3331ab;
+  border-bottom: 1px solid #9d9d9d;
 }
 
 .navbar-custom .navbar-brand {
