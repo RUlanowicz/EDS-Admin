@@ -21,30 +21,36 @@ Report.reopenClass({
             dateReported: 12345,
             reporter: "The Dude",
             images: [],
-            tag: "dirty water",
-            description: "the water is dirty and gross",
-            lat: 1,
-            lng: 1
+
+            tag: "Dumping",
+            description: "Look at where these jerks are dumping",
+            lat: 40.375023,
+            lng: -80.005642
         },
         {
             id: 2,
             dateReported: 12345,
             reporter: "Spiderman",
             images: [],
-            tag: "fallen tree",
-            description: "a tree fell over into the stream",
-            lat: 30,
-            lng: 40
+
+            tag: "Clogged Inlet",
+            description: "This inlet is clogged",
+            lat: 40.397664,
+            lng: -79.998733
         },
         {
             id: 3,
             dateReported: 12345,
             reporter: "Troy Harder",
-            images: [],
-            tag: "other",
-            description: "there was an event",
-            lat: 8,
-            lng: -41
+
+            images: [
+                "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg",
+                "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg",
+                "http://images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/arizona-rock_824_600x450.jpg"],
+            tag: "Erosion",
+            description: "There's so much erosion",
+            lat: 40.368415,
+            lng: -80.031102
         }
 
     ]
