@@ -1,38 +1,39 @@
 {{#modal-dialog title='View' ok='save' close='removeModal'}}
 
     <div class="row">
-        {{#each imageUrl in images}}
-            <div class="col-md-4">
-                <img class="img-responsive" {{ bind-attr src=imageUrl }}>
-            </div>
-        {{/each}}
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <form class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="reporter">Reporter:</label>
-                    <div class="col-sm-10">
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="reporter">Reporter:</label>
+                    <div class="col-sm-9">
                         {{input type="text" class="form-control" id="email" placeholder="Enter Reporter" value=reporter}}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="tag">Tag:</label>
-                    <div class="col-sm-10">
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="tag">Tag:</label>
+                    <div class="col-sm-9">
                         {{input type="text" class="form-control" id="tag" placeholder="Enter Tag" value=tag}}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="description">Description:</label>
-                    <div class="col-sm-10">
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="description">Description:</label>
+                    <div class="col-sm-9">
                         {{textarea class='form-control' rows='5' placeholder='Add Description Here' value=description}}
                     </div>
                 </div>
             </form>
+
+            {{google-map markers=markers autoFitBounds=true}}
+
         </div>
-        <div class="col-md-6">
-            {{google-map lng=lng lat=lat autoFitBounds=true}}
+
+        <div class="col-md-4">
+            {{#each imageUrl in images}}
+                <div class="img-stacked">
+                    <img class="img-thumbnail img-stacked" {{ bind-attr src=imageUrl }}>
+                </div>
+            {{/each}}
+
         </div>
     </div>
 

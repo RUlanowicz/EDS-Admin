@@ -6,9 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.resource('reports', { path: '/reports' }, function() {
-        this.resource('reports.report', { path: ':report_id' });
-    });
+  this.resource('reports', { path: '/reports' }, function() {
+      this.resource('reports.report', { path: ':report_id' });
+  });
+  this.route('map');
 });
 
 export default Router;

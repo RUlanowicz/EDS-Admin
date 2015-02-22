@@ -8,7 +8,7 @@
       <th>Date</th>
       <th>Type</th>
       <th>Description</th>
-      <th>User</th>
+      <th {{action 'sortBy' 'reporter'}}>User</th>
       <th class="text-center">View</th>
       <th class="text-center">Delete</th>
     </tr>
@@ -29,5 +29,3 @@
 </table>
 
 </div>
-
-{{google-map markers=model autoFitBounds=true}}
