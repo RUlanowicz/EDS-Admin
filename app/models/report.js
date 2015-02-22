@@ -69,6 +69,40 @@ Report.reopenClass({
               phone: "412-555-4343",
               zip: 18018
             }
+        },
+        {
+            id: 4,
+            dateReported: 12345,
+            images: ["http://www.snco.us/sw/image/content/full/illegal_dump_003.jpg"],
+            tag: "Dumping",
+            description: "This is a mess",
+            lat: 40.375023,
+            lng: -80.005642,
+
+            user: {
+              name: "Hope Frazier",
+              email: "hope@gmail.com",
+              phone: "412-524-2836",
+              zip: 18018
+            }
+
+        },
+        {
+            id: 5,
+            dateReported: 12345,
+            images: ["https://sites.temple.edu/trash/files/2015/01/IMG_1701.jpg"],
+
+            tag: "Clogged Inlet",
+            description: "This inlet needs to be cleared",
+            lat: 40.397664,
+            lng: -80.098733,
+
+            user: {
+              name: "Missy Sullivan",
+              email: "misty@cmu.edu",
+              phone: "412-555-7363",
+              zip: 18018
+            }
         }
 
     ]
