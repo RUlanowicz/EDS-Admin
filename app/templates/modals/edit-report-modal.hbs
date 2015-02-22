@@ -1,4 +1,4 @@
-{{#modal-dialog title='View' ok='save' close='removeModal'}}
+{{#modal-dialog title='Report Info' ok='save' close='removeModal'}}
 
     <div class="row">
         <div class="col-md-8">
@@ -29,8 +29,8 @@
 
         <div class="col-md-4">
             {{#each imageUrl in images}}
-                <div class="img-stacked">
-                    <img class="img-thumbnail img-stacked" {{ bind-attr src=imageUrl }}>
+                <div class="stack">
+                    <img class="img-thumbnail" {{ bind-attr src=imageUrl }}>
                 </div>
             {{/each}}
 

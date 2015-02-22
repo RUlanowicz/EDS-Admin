@@ -12,11 +12,12 @@
 
 .modal-dialog {
     width: 750px;
+}
 
 .glyph-link {
   cursor:pointer;
 }
 
-.img-stacked {
-    margin-bottom: 20px;
+.stack{
+    margin-bottom: 15px;
 }
